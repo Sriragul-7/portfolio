@@ -136,4 +136,15 @@ body {
   .glass {
     backdrop-filter: blur(9px);
   }
+
+  .skill-tile {
+    min-height: 6.25rem;
+  }
+
+  .skill-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -224,22 +224,22 @@ function App() {
 
         <AnimatedSection id="skills" className="mt-16 md:mt-28">
           <SectionTitle {...siteContent.sections.skills} />
-          <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-8">
             {siteContent.skillGroups.map((group) => (
-              <div key={group.heading} className="glass rounded-2xl p-5 transition hover:border-white/18 hover:bg-white/[0.055] md:p-7">
-                <h3 className="mb-6 text-xl font-semibold text-white">{group.heading}</h3>
-                <div className="grid gap-4 sm:grid-cols-2">
+              <div key={group.heading} className="glass rounded-2xl p-4 transition hover:border-white/18 hover:bg-white/[0.055] md:p-7">
+                <h3 className="mb-4 text-lg font-semibold text-white md:mb-6 md:text-xl">{group.heading}</h3>
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
                   {skills[group.dataKey].map((item) => {
                     const Icon = iconMap[item.icon];
                     return (
                       <div
                         key={item.name}
-                        className="rounded-xl border border-white/10 bg-black/18 p-4 transition hover:-translate-y-0.5 hover:border-teal-200/40 hover:bg-white/[0.055]"
+                        className="skill-tile rounded-xl border border-white/10 bg-black/18 p-3 transition hover:-translate-y-0.5 hover:border-teal-200/40 hover:bg-white/[0.055] md:p-4"
                       >
-                        <div className="mb-4 inline-flex rounded-xl border border-white/10 bg-white/5 p-3 text-2xl text-teal-100">
+                        <div className="skill-icon mb-2 inline-flex rounded-lg border border-white/10 bg-white/5 p-2 text-xl text-teal-100 md:mb-4 md:rounded-xl md:p-3 md:text-2xl">
                           {Icon ? <Icon /> : <span className="text-base">•</span>}
                         </div>
-                        <p className="text-sm font-medium leading-6 text-zinc-100">{item.name}</p>
+                        <p className="text-xs font-medium leading-5 text-zinc-100 md:text-sm md:leading-6">{item.name}</p>
                       </div>
                     );
                   })}
