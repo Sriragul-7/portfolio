@@ -110,13 +110,13 @@ function App() {
       <Navbar brand={siteContent.brand} sections={siteContent.navigation} />
       <BackToTop />
 
-      <main className="mx-auto max-w-6xl px-4 pb-20 pt-24 sm:px-5 md:px-6 md:pt-28">
+      <main className="mx-auto max-w-6xl px-4 pb-20 pt-6 sm:px-5 md:px-6 md:pt-28">
         <AnimatedSection
           id="hero"
           className="hero-shell relative isolate px-1 py-7 sm:px-3 md:px-4 lg:px-6"
         >
           <div className="hero-field" aria-hidden="true" />
-          <div className="grid items-center gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
+          <div className="grid items-center gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -130,6 +130,11 @@ function App() {
               <div className="mt-4 h-8 text-base font-medium text-teal-200 sm:text-lg">
                 <span className="mr-2 text-zinc-500">{">"}</span>
                 {roles[roleIndex]}
+              </div>
+              <div className="mobile-portrait relative mx-auto mt-3 h-[255px] w-full max-w-[18rem] sm:h-[320px] sm:max-w-[22rem] lg:hidden">
+                <div className="portrait-stage">
+                  <img src={personal.image} alt={personal.name} className="portrait-image" />
+                </div>
               </div>
               <p className="mt-6 max-w-2xl leading-8 text-zinc-200">{personal.intro}</p>
 
@@ -193,7 +198,7 @@ function App() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15 }}
-              className="relative z-0 mx-auto min-h-[380px] w-full max-w-[35rem] sm:min-h-[460px] lg:min-h-[560px]"
+              className="relative z-0 mx-auto hidden min-h-[380px] w-full max-w-[35rem] sm:min-h-[460px] lg:block lg:min-h-[560px]"
             >
               <div className="portrait-glow" aria-hidden="true" />
               <div className="portrait-stage">
@@ -217,7 +222,7 @@ function App() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="skills" className="mt-24 md:mt-28">
+        <AnimatedSection id="skills" className="mt-16 md:mt-28">
           <SectionTitle {...siteContent.sections.skills} />
           <div className="grid gap-6 md:grid-cols-2 md:gap-8">
             {siteContent.skillGroups.map((group) => (
@@ -244,7 +249,7 @@ function App() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="projects" className="mt-24 md:mt-28">
+        <AnimatedSection id="projects" className="mt-16 md:mt-28">
           <SectionTitle {...siteContent.sections.projects} />
           <div className="grid gap-5 md:grid-cols-2">
             {projects.map((project, idx) => (
@@ -253,7 +258,7 @@ function App() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="achievements" className="mt-24 md:mt-28">
+        <AnimatedSection id="achievements" className="mt-16 md:mt-28">
           <SectionTitle {...siteContent.sections.achievements} />
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {achievements.map((item, idx) => (
@@ -274,7 +279,7 @@ function App() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="certifications" className="mt-24 md:mt-28">
+        <AnimatedSection id="certifications" className="mt-16 md:mt-28">
           <SectionTitle {...siteContent.sections.certifications} />
           <div className="grid gap-4 md:grid-cols-3">
             {certifications.map((cert) => (
@@ -290,7 +295,7 @@ function App() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="languages" className="mt-24 md:mt-28">
+        <AnimatedSection id="languages" className="mt-16 md:mt-28">
           <SectionTitle {...siteContent.sections.languages} />
           <div className="flex flex-wrap gap-3">
             {spokenLanguages.map((lang) => (
@@ -301,7 +306,7 @@ function App() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection id="contact" className="mt-24 md:mt-28">
+        <AnimatedSection id="contact" className="mt-16 md:mt-28">
           <SectionTitle {...siteContent.sections.contact} />
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="glass rounded-2xl p-6">

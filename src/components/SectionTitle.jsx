@@ -5,9 +5,9 @@ export default function SectionTitle({ eyebrow, title, subtitle }) {
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.35 }}
-      transition={{ duration: 0.6 }}
-      className="mb-10"
+      viewport={{ once: true, amount: 0.08, margin: "0px 0px -8% 0px" }}
+      transition={{ duration: 0.45 }}
+      className="mb-8 md:mb-10"
     >
       <p className="mb-3 text-xs font-semibold tracking-[0.32em] text-teal-200/85">{eyebrow}</p>
       <h2 className="text-3xl font-semibold text-white md:text-4xl">{title}</h2>

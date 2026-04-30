@@ -112,6 +112,12 @@ body {
   mask-image: linear-gradient(180deg, #000 0%, #000 78%, transparent 100%);
 }
 
+.mobile-portrait .portrait-stage::after {
+  width: min(92%, 18rem);
+  height: 24%;
+  filter: blur(12px);
+}
+
 @media (max-width: 1023px) {
   .hero-shell {
     background: transparent;
@@ -123,11 +129,11 @@ body {
 }
 
 @media (max-width: 640px) {
-  .hero-field {
-    background-size: 38px 38px;
+  .portrait-image {
+    width: min(100%, 19rem);
   }
 
-  .portrait-image {
-    width: min(100%, 24rem);
+  .glass {
+    backdrop-filter: blur(9px);
   }
 }

@@ -10,8 +10,8 @@ export default function ProjectCard({ project, index, labels }) {
     <motion.article
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
+      viewport={{ once: true, amount: 0.05, margin: "0px 0px -8% 0px" }}
+      transition={{ duration: 0.45, delay: Math.min(index * 0.05, 0.15) }}
       className="shine glass group flex h-full flex-col rounded-2xl p-5 transition hover:-translate-y-1 hover:border-teal-200/35 hover:bg-white/[0.055]"
     >
       <h3 className="text-2xl font-semibold leading-tight text-white transition group-hover:text-teal-100 md:text-[1.7rem]">

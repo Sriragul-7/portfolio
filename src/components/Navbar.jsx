@@ -23,7 +23,7 @@ export default function Navbar({ brand, sections }) {
   }, [sections]);
 
   return (
-    <header className="fixed left-0 right-0 top-3 z-50 mx-auto w-[94%] max-w-6xl rounded-2xl border border-white/10 bg-black/70 px-3 py-2 shadow-[0_14px_50px_rgba(0,0,0,0.35)] backdrop-blur-xl md:top-4">
+    <header className="fixed left-0 right-0 top-3 z-50 mx-auto hidden w-[94%] max-w-6xl rounded-2xl border border-white/10 bg-black/70 px-3 py-2 shadow-[0_14px_50px_rgba(0,0,0,0.35)] backdrop-blur-xl md:block md:top-4">
       <nav className="flex items-center justify-between gap-3">
         <p className="shrink-0 px-2 text-xs font-semibold tracking-[0.22em] text-white/85 sm:text-sm">{brand}</p>
         <ul className="flex items-center justify-end gap-1 overflow-x-auto whitespace-nowrap text-[11px] text-zinc-300 [scrollbar-width:none] md:text-xs">
